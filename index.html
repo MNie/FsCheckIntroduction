@@ -256,6 +256,7 @@
 <span class="l">17: </span>
 <span class="l">18: </span>
 <span class="l">19: </span>
+<span class="l">20: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span class="i">FsCheck</span>
 <span class="k">open</span> <span class="i">NUnit</span><span class="o">.</span><span class="i">Framework</span>
@@ -267,7 +268,8 @@
     <span class="k">use</span> <span class="i">client</span> <span class="o">=</span> <span class="i">HttpClient</span>()
     (
       <span class="k">let</span> <span class="i">test</span>(<span class="i">page</span><span class="o">:</span> <span class="i">PageTest</span>) <span class="o">=</span>
-        <span class="k">let</span> <span class="i">url</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs2', 14)" onmouseover="showTip(event, 'fs2', 14)" class="i">sprintf</span> <span class="s">&quot;%s/v1/Page?userId=%s&amp;name=%s&quot;</span> <span class="i">endpointAddress</span> <span class="i">userId</span> <span class="i">page</span><span class="o">.</span><span class="i">name</span>
+        <span class="k">let</span> <span class="i">url</span> <span class="o">=</span> 
+          <span onmouseout="hideTip(event, 'fs2', 14)" onmouseover="showTip(event, 'fs2', 14)" class="i">sprintf</span> <span class="s">&quot;%s/v1/Page?userId=%s&amp;name=%s&quot;</span> <span class="i">endpointAddress</span> <span class="i">userId</span> <span class="i">page</span><span class="o">.</span><span class="i">name</span>
         <span class="k">let</span> <span class="i">response</span> <span class="o">=</span> <span class="i">client</span><span class="o">.</span><span class="i">GetAsync</span> <span class="i">url</span>
         <span class="k">let</span> <span class="i">result</span> <span class="o">=</span> <span class="i">response</span><span class="o">.</span><span class="i">Result</span><span class="o">.</span><span class="i">StatusCode</span>
         <span class="k">let</span> <span class="i">label</span> <span class="o">=</span> 
@@ -436,6 +438,7 @@
 <span class="l">17: </span>
 <span class="l">18: </span>
 <span class="l">19: </span>
+<span class="l">20: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span class="i">FsCheck</span>
 <span class="k">open</span> <span class="i">NUnit</span><span class="o">.</span><span class="i">Framework</span>
@@ -447,7 +450,8 @@
     <span class="k">use</span> <span class="i">client</span> <span class="o">=</span> <span class="i">HttpClient</span>()
     (
       <span class="k">let</span> <span class="i">test</span>(<span class="i">page</span><span class="o">:</span> <span class="i">PageTest</span>) <span class="o">=</span>
-        <span class="k">let</span> <span class="i">url</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs2', 14)" onmouseover="showTip(event, 'fs2', 14)" class="i">sprintf</span> <span class="s">&quot;%s/v1/Page?userId=%s&amp;name=%s&quot;</span> <span class="i">endpointAddress</span> <span class="i">userId</span> <span class="i">page</span><span class="o">.</span><span class="i">name</span>
+        <span class="k">let</span> <span class="i">url</span> <span class="o">=</span> 
+          <span onmouseout="hideTip(event, 'fs2', 14)" onmouseover="showTip(event, 'fs2', 14)" class="i">sprintf</span> <span class="s">&quot;%s/v1/Page?userId=%s&amp;name=%s&quot;</span> <span class="i">endpointAddress</span> <span class="i">userId</span> <span class="i">page</span><span class="o">.</span><span class="i">name</span>
         <span class="k">let</span> <span class="i">response</span> <span class="o">=</span> <span class="i">client</span><span class="o">.</span><span class="i">GetAsync</span> <span class="i">url</span>
         <span class="k">let</span> <span class="i">result</span> <span class="o">=</span> <span class="i">response</span><span class="o">.</span><span class="i">Result</span><span class="o">.</span><span class="i">StatusCode</span>
         <span class="k">let</span> <span class="i">label</span> <span class="o">=</span> 
